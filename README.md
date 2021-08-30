@@ -1,37 +1,84 @@
 # Project Overview
-
+Within this project you will be able to find anything related to your favorite soccer team.  The project will be enable access  to highlights, team scheduling, betting statistics, team sheets, random facts, coaching corner. We are a one stop shop!
 ## Project Name
 
-The name of your project.
+Footz
 
-## Project Description
+## Project Description (more detail)
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Main Page- This will be the hub here we will have a discription of the site, the 2014 nike world cup commerical (for hype). 
+
+Search Bar- Be able to access any part of the site and details within it.
+
+Map- This will be a section you can click and find different professional clubs located throughout the world. 
+
+Docs- Will be information and api used to build the app
+
+Coaching Corner- Is a section used for coaches to connect and share ideas. Along with information provided on topics related to the game. 
+
+About Me- This will be background information of myself and why this site was built
+
+Random Facts- It will pop up a window on whatever page you are on and give you a random fact about the game. 
+
+on the left sided menu: We have will have a home button, it will also have access to the top 5 leagues and main compeitions within the game of soccer. 
+
+footer - will have contact information and it will have social media connections
 
 ## API and Data Sample
 
 Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
 
+https://www.football-data.org/        Access to 12 leagues, scores, schedules and more...
+
+  "scorers": [
+        {
+            "player": {
+                "id": 2076,
+                "name": "Ciro Immobile",
+                "firstName": "Ciro",
+                "lastName": null,
+                "dateOfBirth": "1990-02-20",
+                "countryOfBirth": "Italy",
+                "nationality": "Italy",
+                "position": "Attacker",
+                "shirtNumber": null,
+                "lastUpdated": "2020-11-26T02:19:41Z"
+            },
+            "team": {
+                "id": 110,
+                "name": "SS Lazio"
+            },
+            "numberOfGoals": 4
+        },
+
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
+https://lucid.app/lucidchart/invitations/accept/inv_0754314c-0ccd-4f2a-9e38-76f0957d6bd6?viewport_loc=-163%2C-36%2C2312%2C1184%2C0_0
 ### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
+*These are examples only. Replace with your own MVP features.* Updated on 8/29
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Find and use two external api 
+- Have a main page access to a pop up window for (facts) and EPL page
+- Being able to access wanted data within the English Premier League (Including: Stats, schedule, game roster, previous meetings)
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
+*These are examples only. Replace with your own Post-MVP features.* Updated on 8/29
 
-- Add second API
-- Use local storage to save user favorites
+- Add additional apis (3-5 apis)
+- Map feature allowing location of clubs on the map
+- Access to all top 5 leagues pages, including teams
+- Access to coaching corner
+- Having a section on the home page for trending topics
+- Having a comment section and fanbase team threads
+- Create a favorites tap
+- Create a login system to then be able to have a favorite sections
+- Adding sports betting
 
 ## Project Schedule
 
@@ -41,18 +88,19 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|August 30| Technical report due / finish build out of main page html / 90% css done for main page | Incomplete
+|August 31| Build second page HTML and css / finish main page css | Incomplete
+|September 1|Js coding for api structure/ adding second api | Incomplete
+|September 2| Finalize code for api / final css adjustments| Incomplete
+|September 3| Presentations | Incomplete
+
+
 
 ## Priority Matrix
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
 
+https://sync.appfluence.com/native/api/v1/item/1883534807/
 ## Timeframes
 
 Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
@@ -61,10 +109,20 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Build both vertical and hortizal nav bars | H | 3hrs| |  |
+| Build CSS for vertical and hortizal nav bars | H | 1.5hrs|  |  |
+| Adding in Paragraph, headers into both bav bars | H | 2hrs|  |  |
+| Creating footer- connecting it to SM and making contact form  | H | 1.5hrs|  |
+| Connecting Api to England home page and producing wanted information | H | 4 hours| |  |
+| Building highlights for nav bar items | H | 1.5 hours|
+| Building England Home Page HTML | H | 2.5hrs| |
+| Building England Home Page CSS | H | 1.5hrs| |
+| Connecting 2nd API | H | 4 hrs| |
+| Connecting 2nd API and structure it to mix with the first one | H | 4 hrs| |
+| Total | H | 48hrs|  |  |
 
+
+^ Not sure what all to put in the details but I would assume with 4 days of work with a min of 12 hours days and a max of 17 hours a day on the project the max time I could hit would be 48-68 hours total time. 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
