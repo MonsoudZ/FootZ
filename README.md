@@ -30,7 +30,8 @@ Specify the API you are using and include a link. Show us a snippet of JSON retu
 
 https://www.football-data.org/        Access to 12 leagues, scores, schedules and more...
 
-  "scorers": [
+
+ ``` "scorers": [
         {
             "player": {
                 "id": 2076,
@@ -50,14 +51,20 @@ https://www.football-data.org/        Access to 12 leagues, scores, schedules an
             },
             "numberOfGoals": 4
         },
-
+```
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
-https://lucid.app/lucidchart/invitations/accept/inv_0754314c-0ccd-4f2a-9e38-76f0957d6bd6?viewport_loc=-163%2C-36%2C2312%2C1184%2C0_0
+https://lucid.app/lucidchart/invitations/accept/inv_11b7a75b-24d2-4c1c-aaa2-675a53b00620?viewport_loc=-163%2C-36%2C2312%2C1070%2C0_0
 
 https://ibb.co/RbVdmzc
+
+<img src="pictures/wireFrame.jpeg">
+
+The wire frame is of the home page^
+
+
 
 
 
