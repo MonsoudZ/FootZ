@@ -16,6 +16,21 @@ async function requestFromAPI() {
   }
 }
 
+/* example info i want in table : 
+                "rank": "1",
+                "name": "Tottenham Hotspur",
+                "points": "9",
+                "matches": "3",
+                "goal_diff": "3",
+                "goals_scored": "3",
+                "goals_conceded": "0",
+                "lost": "0",
+                "drawn": "0",
+                "won": "3",
+                */
+
+
+
 // requestFromAPI()
 // const englandOne = document.querySelector(".eplT")
 
