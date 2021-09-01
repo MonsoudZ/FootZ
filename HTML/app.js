@@ -4,7 +4,12 @@
 let video = document.querySelector('.video')
 let mainP = document.querySelector('.MainP')
 let results = document.querySelector('.results')
-
+let leagueLinks = document.querySelectorAll('[data-id]')
+console.log(leagueLinks)
+leagueLinks.forEach(league => {
+  console.log(league.dataset.id)
+  league.addEventListener("click", () => requestFromAPI(league.dataset.id))
+})
 // Epl
 
 const eplTableDiv = document.querySelector(".EplTable")
@@ -34,7 +39,7 @@ async function requestFromAPI(id) {
   }
 }
 
-requestFromAPI(2)
+
 
 
 //============ Originally used a for loop, but we used .forEach instead ====================//
