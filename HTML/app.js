@@ -8,7 +8,7 @@ let leagueLinks = document.querySelectorAll('[data-id]')
 console.log(leagueLinks)
 leagueLinks.forEach(league => {
   console.log(league.dataset.id)
-  league.addEventListener("click", () => requestFromAPI(league.dataset.id))
+  league.addEventListener("click", () => chazz())
 })
 // Epl
 
@@ -25,11 +25,41 @@ async function requestFromAPI(id) {
       let teamWrapper = document.createElement('div')
       teamWrapper.className = "team-results"
       results.append(teamWrapper)
+      
+      let leagueRank = document.createElement('h4')
+      leagueRank.textContent = team.rank
+      console.log(team.rank)
+      teamWrapper.append(leagueRank)
 
-      let teamName = document.createElement('h2')
+      let teamName = document.createElement('h4')
       teamName.textContent = team.name
       console.log(team.name)
       teamWrapper.append(teamName)
+
+      let gamesWon = document.createElement('h4')
+      gamesWon.textContent = team.won
+      console.log(team.won)
+      teamWrapper.append(gamesWon)
+
+      let gamesLost = document.createElement('h4')
+      gamesLost.textContent = team.lost
+      console.log(team.won)
+      teamWrapper.append(gamesLost)
+
+      let gamesDrawn = document.createElement('h4')
+      gamesDrawn.textContent = team.drawn
+      console.log(team.won)
+      teamWrapper.append(gamesDrawn)
+      
+      let totalPoints = document.createElement('h4')
+      totalPoints.textContent = team.points
+      console.log(team.won)
+      teamWrapper.append(totalPoints)
+      
+      let matchesPlayed = document.createElement('h4')
+      matchesPlayed.textContent = team.matches
+      console.log(team.won)
+      teamWrapper.append(matchesPlayed)
       
     }
     )
@@ -40,6 +70,50 @@ async function requestFromAPI(id) {
 }
 
 
+
+function chazz() {
+  video.innerHTML = ''
+  mainP.innerHTML = ''
+let teamWrapper = document.createElement('div')
+      teamWrapper.className = "team-results"
+      results.append(teamWrapper)
+      
+      let leagueRank = document.createElement('h4')
+      leagueRank.textContent = 10
+      // console.log(team.rank)
+      teamWrapper.append(leagueRank)
+
+      let teamName = document.createElement('h4')
+      teamName.textContent = "busa"
+      // console.log(team.name)
+      teamWrapper.append(teamName)
+
+      let gamesWon = document.createElement('h4')
+      gamesWon.textContent = 10
+      // console.log(team.won)
+      teamWrapper.append(gamesWon)
+
+      let gamesLost = document.createElement('h4')
+      gamesLost.textContent = 0
+      // console.log(team.won)
+      teamWrapper.append(gamesLost)
+
+      let gamesDrawn = document.createElement('h4')
+      gamesDrawn.textContent = 0
+      // console.log(team.won)
+      teamWrapper.append(gamesDrawn)
+      
+      let totalPoints = document.createElement('h4')
+      totalPoints.textContent = 20
+      // console.log(team.won)
+      teamWrapper.append(totalPoints)
+      
+      let matchesPlayed = document.createElement('h4')
+      matchesPlayed.textContent = 5
+      // console.log(team.won)
+      teamWrapper.append(matchesPlayed)
+      
+    }
 
 
 //============ Originally used a for loop, but we used .forEach instead ====================//
@@ -85,6 +159,20 @@ async function requestFromAPI(id) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* example info i want in table : 
                 "rank": "1",
                 "name": "Tottenham Hotspur",
@@ -107,21 +195,16 @@ async function requestFromAPI(id) {
 // async function requestFromAPIGer() {
 //   try {
 //     const resultGerman = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=1&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     // let standing = result.data.text;
-//     // tableEpl(eplTable)
-//     // return standing;
+
 //     console.log(resultGerman.data.data.table)
 //   } catch (error) {
 //     console.log(error)
 //   }
 // }
 
-//  //requestFromAPIGer()
-
 
 
 // //spain 
-
 
 // async function requestFromAPISpa() {
 //   try {
