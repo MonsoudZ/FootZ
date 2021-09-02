@@ -8,10 +8,9 @@ let leagueLinks = document.querySelectorAll('[data-id]')
 console.log(leagueLinks)
 leagueLinks.forEach(league => {
   console.log(league.dataset.id)
-  league.addEventListener("click", () => chazz())
+  league.addEventListener("click", () => requestFromAPI(league.dataset.id))
+  // Epl
 })
-// Epl
-
 const eplTableDiv = document.querySelector(".EplTable")
 
 async function requestFromAPI(id) {
@@ -21,23 +20,33 @@ async function requestFromAPI(id) {
     const result = await axios.get(`https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=${id}&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb`);
     // dataDisplay(result.data.data.table)
     console.log(result.data.data.table)
+    results.innerHTML = ''
+    let leagueHeaders = document.createElement('rankH')
+    leagueHeaders.textContent = [`Rank", "Name", "Won", "Lost", "Draw", "Total Points", "Matches Played`]
+     results.append(leagueHeaders)
+    
+
     result.data.data.table.forEach((team) => {
       let teamWrapper = document.createElement('div')
       teamWrapper.className = "team-results"
       results.append(teamWrapper)
-      
+
       let leagueRank = document.createElement('h4')
       leagueRank.textContent = team.rank
+      leagueRank.className = "league-rank"
       console.log(team.rank)
       teamWrapper.append(leagueRank)
 
+    
       let teamName = document.createElement('h4')
       teamName.textContent = team.name
+      teamName.className = "name"
       console.log(team.name)
       teamWrapper.append(teamName)
 
       let gamesWon = document.createElement('h4')
       gamesWon.textContent = team.won
+      gamesWon.className = "games-won"
       console.log(team.won)
       teamWrapper.append(gamesWon)
 
@@ -66,300 +75,5 @@ async function requestFromAPI(id) {
     
   } catch (error) {
     console.log(error)
-  }
+  } 
 }
-
-
-
-function chazz() {
-  video.innerHTML = ''
-  mainP.innerHTML = ''
-let teamWrapper = document.createElement('div')
-      teamWrapper.className = "team-results"
-      results.append(teamWrapper)
-      
-      let leagueRank = document.createElement('h4')
-      leagueRank.textContent = 10
-      // console.log(team.rank)
-      teamWrapper.append(leagueRank)
-
-      let teamName = document.createElement('h4')
-      teamName.textContent = "busa"
-      // console.log(team.name)
-      teamWrapper.append(teamName)
-
-      let gamesWon = document.createElement('h4')
-      gamesWon.textContent = 10
-      // console.log(team.won)
-      teamWrapper.append(gamesWon)
-
-      let gamesLost = document.createElement('h4')
-      gamesLost.textContent = 0
-      // console.log(team.won)
-      teamWrapper.append(gamesLost)
-
-      let gamesDrawn = document.createElement('h4')
-      gamesDrawn.textContent = 0
-      // console.log(team.won)
-      teamWrapper.append(gamesDrawn)
-      
-      let totalPoints = document.createElement('h4')
-      totalPoints.textContent = 20
-      // console.log(team.won)
-      teamWrapper.append(totalPoints)
-      
-      let matchesPlayed = document.createElement('h4')
-      matchesPlayed.textContent = 5
-      // console.log(team.won)
-      teamWrapper.append(matchesPlayed)
-      
-    }
-
-
-//============ Originally used a for loop, but we used .forEach instead ====================//
-// function dataDisplay(dataArray) {
-//   for (let i = 0; i < dataArray.length; i++) {
-//     console.log(dataArray[i].name)
-//   }
-
-// }
-
-
-// function displayLoadedData(table) {
-//   for (let i = 0; i < table; i++) {
-//     console.log(displayLoadedData(i))
-  
-
-
-
-//=================== This should all be in your try up above ======================//
-
-    // const rank = document.getElementById("#epl")
-    // console.log(rank)
-    // const name = document.createElement("div")
-    // const goals = document.createElement("div")
-    // const points = document.createElement("div")
-    // const matches = document.createElement("div")
-    // result.appendChild(rank)
-
-    // rank.appendChild(name)
-
-    // name.appendChild(goals)
-
-    // points.innerText = dataEpl[i].rank
-
-    // goals.appendChild(points)
-    // goals.appendChild(matches)
-
-    // rank.classList.add("rank")
-    // name.classList.add("name")
-    // goals.classList.add("goals")
-    // points.classList.add("points")
-    // matches.classList.add("matches")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* example info i want in table : 
-                "rank": "1",
-                "name": "Tottenham Hotspur",
-                "points": "9",
-                "matches": "3",
-                "goal_diff": "3",
-                "goals_scored": "3",
-                "goals_conceded": "0",
-                "lost": "0",
-                "drawn": "0",
-                "won": "3",
-                */
-
-// Is the table information we are looking for/ Next possible to take and append all names within league and push them to an array(teams) and have it presented in order A-Z above the standing 2 rows of 10?
-
-
-
-
-// German
-// async function requestFromAPIGer() {
-//   try {
-//     const resultGerman = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=1&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-
-//     console.log(resultGerman.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-
-
-// //spain 
-
-// async function requestFromAPISpa() {
-//   try {
-//     const resultSpa = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=3&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     // let standing = result.data.text;
-//     // tableEpl(eplTable)
-//     // return standing;
-//     console.log(resultSpa.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-// // requestFromAPISpa()
-
-
-// // italy 
-
-// async function requestFromAPIItaly() {
-//   try {
-//     const resultIta = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=4&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     // let standing = result.data.text;
-//     // tableEpl(eplTable)
-//     // return standing;
-//     console.log(resultIta.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-
-// // france
-
-// async function requestFromAPIFran() {
-//   try {
-//     const resultFran = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=5&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     // let standing = result.data.text;
-//     // tableEpl(eplTable)
-//     // return standing;
-//     console.log(resultFran.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-
-// // portugal
-
-
-// async function requestFromAPISpa() {
-//   try {
-//     const resultSpa = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=8&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     // let standing = result.data.text;
-//     // tableEpl(eplTable)
-//     // return standing;
-//     console.log(resultSpa.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-
-
-// // netherlands
-
-// async function requestFromAPISpa() {
-//   try {
-//     const resultSpa = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=196&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     // let standing = result.data.text;
-//     // tableEpl(eplTable)
-//     // return standing;
-//     console.log(resultSpa.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-
-
-
-// // champions League
-
-// async function requestFromAPISpa() {
-//   try {
-//     const resultSpa = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=244&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     // let standing = result.data.text;
-//     // tableEpl(eplTable)
-//     // return standing;
-//     console.log(resultSpa.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-
-
-// // euro champ
-
-// async function requestFromAPISpa() {
-//   try {
-//     const resultSpa = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=387&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     // let standing = result.data.text;
-//     // tableEpl(eplTable)
-//     // return standing;
-//     console.log(resultSpa.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-
-
-
-
-// // world cup
-
-// async function requestFromAPISpa() {
-//   try {
-//     const resultSpa = await axios.get("https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=362&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb");
-//     console.log(resultSpa.data.data.table)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
