@@ -72,15 +72,15 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP
 
-_These are examples only. Replace with your own MVP features._ Updated on 8/29
+_These are examples only. Replace with your own MVP features._
 
 - Find and use one external api
-- Have a main page access to a pop up window for (facts) and EPL page
+- present information into a table
 - Being able to access all 7 nations top league standing data
 
 #### PostMVP
 
-_These are examples only. Replace with your own Post-MVP features._ Updated on 8/29
+_These are examples only. Replace with your own Post-MVP features._
 
 - Add additional apis (3-5 apis)
 - Map feature allowing location of clubs on the map
@@ -130,7 +130,7 @@ Time frames are also key in the development cycle. You have limited time to code
 | Building England Home Page CSS                                       |    H     |     1.5hrs     |               |
 | Connecting 2nd API                                                   |    H     |     4 hrs      |               |
 | Connecting 2nd API and structure it to mix with the first one        |    H     |     4 hrs      |               |
-| Total                                                                |    H     |     48hrs      |               |             |
+| Total                                                                |    H     |     48hrs      |   52 hours    |  52 hours   |
 
 ^ Not sure what all to put in the details but I would assume with 4 days of work with a min of 12 hours days and a max of 17 hours a day on the project the max time I could hit would be 48-68 hours total time.
 
@@ -138,12 +138,18 @@ Time frames are also key in the development cycle. You have limited time to code
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
+.wrapper .sidebar ul li:hover a {
+color: #854;
 }
-```
+
+I'm really happy about this. I kept diving deep into css to see how powerful it was and its very powerful. Messed up my project a little i bet so its not totally clean but I really enjoy the almost blended in sidebar and the orange bronze as you glade over it.
 
 ## Change Log
 
 Use this section to document what changes were made and the reasoning behind those changes.
+
+I ended up taking out a couple of menu items that was making the screen too busy.
+
+I went back and forth on how to present the information so landed on a table format.
+
+i took off the video as well as i like the idea but the way it wasn't sitting with me right.

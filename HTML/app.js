@@ -24,7 +24,7 @@ async function requestFromAPI(id) {
     let leagueHeaders = document.createElement('div')
     leagueHeaders.classList.add("leagueHeaders")
     leagueHeaders.innerHTML =
-      ("<p class='headers'><div>Rank</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>Name</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>W</div>L<div>D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TP &nbsp;&nbsp;&nbsp;&nbsp; MP</div></p > ")
+      ("<p class='headers'><div>Rank</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>Name</div>&nbsp&nbsp;&nbsp;&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>W</div>L<div>D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TP &nbsp;&nbsp;&nbsp;&nbsp; MP</div></p > ")
      results.append(leagueHeaders)
     
 

@@ -179,7 +179,7 @@ h3 {
   padding: 5px;
   align-items: baseline;
   border: 2px solid #3eb489;
-  margin-left: 220px;
+  margin-left: 275px;
   width: 62%;
 }
 
@@ -225,12 +225,12 @@ h4 {
 
 .leagueHeaders {
   display: flex;
-  justify-content: space-evenly;
-  margin-left: 80px;
+  justify-content: space-around;
+  margin-left: 165px;
 }
 
 /* .headers {
-  width: 60px;
+  margin: 0 2px;
 } */
 
 @media screen and (max-width: 700px) {
@@ -277,7 +277,9 @@ h4 {
     font-size: small;
   }
   .results {
-    width: auto;
-    margin-right: -30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
   }
 }
