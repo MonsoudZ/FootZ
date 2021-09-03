@@ -167,13 +167,12 @@ h3 {
   text-size-adjust: 10px;
 }
 
-.team-results {
+/* .team-results {
   display: flex;
   flex-direction: row;
   margin: 10px 250px;
   align-content: space-around;
-  align-items: baseline;
-}
+  align-items: baseline; */
 
 div.team-results {
   display: flex;
@@ -181,14 +180,16 @@ div.team-results {
   padding: 5px;
   align-items: baseline;
   border: 2px solid #3eb489;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .name {
   display: flex;
   align-content: left;
-
   justify-content: space-evenly;
   align-items: baseline;
+  width: 300px;
 }
 
 h4 {
@@ -208,17 +209,27 @@ h4 {
   align-items: baseline;
 }
 
-.rankH {
+/* .rankH {
   display: grid;
   flex-flow: row;
   margin: 0px 260px 0px;
   justify-content: space-evenly;
-}
+} */
 
-.nameH {
+/* .nameH {
   display: flex;
   flex-flow: row;
   white-space: normal;
   justify-content: space-evenly;
   align-items: baseline;
+} */
+
+.leagueHeaders {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.headers {
+  width: 600px;
 }

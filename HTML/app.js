@@ -21,8 +21,10 @@ async function requestFromAPI(id) {
     // dataDisplay(result.data.data.table)
     console.log(result.data.data.table)
     results.innerHTML = ''
-    let leagueHeaders = document.createElement('rankH')
-    leagueHeaders.textContent = [`Rank", "Name", "Won", "Lost", "Draw", "Total Points", "Matches Played`]
+    let leagueHeaders = document.createElement('div')
+    leagueHeaders.classList.add("leagueHeaders")
+    leagueHeaders.innerHTML =
+      ("<p class='headers'> Rank  &nbsp;  &nbsp; &nbsp;   Name                  Won Lost Draw Total Points Matches Played</p>")
      results.append(leagueHeaders)
     
 
