@@ -32,6 +32,8 @@ Specify the API you are using and include a link. Show us a snippet of JSON retu
 
 https://www.football-data.org/ Access to 12 leagues, scores, schedules and more...
 
+switched to https://livescore-api.com/api-client/leagues/table.json?competition_id=${id}&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb`);
+
 ```"scorers": [
        {
            "player": {
