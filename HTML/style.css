@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; 
   padding: 0;
-  margin: 0;
+  margin: 0;  */
   list-style: none;
   text-decoration: none;
 }
@@ -12,45 +12,37 @@ body {
   background-color: #fff;
   color: #333;
   line-height: 1.6;
+  max-width: fit-content;
 }
 .wrapper {
   display: flex;
   position: relative;
   padding-left: 0;
   padding-bottom: 5-px;
+  flex-wrap: wrap;
 }
 
 .wrapper ul {
   display: fixed;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-direction: row;
   align-content: flex-start;
   list-style: none;
   margin: 0;
-  padding: 0;
-  height: 50em;
+  height: auto;
+  width: auto;
 }
-
-/* .wrapper li {
-  display: inline;
-  width: 0px;
-  height: 3px;
-  margin: 7px;
-  
-} */
 
 .wrapper .sidebar {
-  position: fixed;
+  position: absolute;
   height: 80%;
-  padding: none;
 }
 
-.wrapper .sidebar h2 {
+/* .wrapper .sidebar h2 {
   color: #5432;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: px;
-}
+  margin-bottom: 
+} */
 
 /* .wrapper .sidebar ul li {
   padding: 5px;
@@ -60,7 +52,7 @@ body {
 
 .wrapper .sidebar ul li a {
   color: #bdbdbd;
-  display: block;
+  display: inline;
 }
 
 .wrapper .sidebar ul li:hover a {
@@ -84,6 +76,8 @@ p {
 
 .navbar {
   background-color: #3eb489;
+  list-style: none;
+  text-decoration: none;
   color: #fff;
   height: 70px;
 }
@@ -128,20 +122,25 @@ p {
   width: 100vw;
   height: 100vh;
   padding: 20px;
+  margin-left: 50px;
+  margin-right: 10px;
 }
 
 #two {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  width: 40vw;
+  width: 60vw;
   height: 40vh;
   text-align: center;
 }
+
 h2 {
   color: #333;
   text-align: center;
+  margin-left: 25px;
 }
+
 h3 {
   color: #333;
   display: flex;
@@ -174,14 +173,14 @@ h3 {
   align-content: space-around;
   align-items: baseline; */
 
-div.team-results {
+.team-results {
   display: flex;
   align-content: space-around;
   padding: 5px;
   align-items: baseline;
   border: 2px solid #3eb489;
   margin: 0 auto;
-  width: 50%;
+  width: 62%;
 }
 
 .name {
@@ -226,10 +225,59 @@ h4 {
 
 .leagueHeaders {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
 }
 
-.headers {
-  width: 600px;
+/* .headers {
+  width: 60px;
+} */
+
+@media screen and (max-width: 700px) {
+  .wrapper ul {
+    display: inline-block;
+    align-content: flex-start;
+    height: auto;
+    width: 20vw;
+    margin-left: -38px;
+    font-size: 16px;
+  }
+  i.fas.fa-futbol {
+    visibility: hidden;
+  }
+  .MainP {
+    color: #333;
+    display: flex;
+    /* align-items: center; */
+    width: auto;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 5px;
+  }
+  h4 {
+    margin: 0 auto;
+    justify-content: space-evenly;
+    font-size: small;
+  }
+  .leagueHeaders {
+    display: flex;
+    /* justify-content: space-evenly; */
+    width: auto;
+    font-size: small;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 50px;
+  }
+  .name {
+    display: flex;
+    align-content: left;
+    justify-content: space-evenly;
+    align-items: baseline;
+    width: 15vw;
+    font-size: small;
+  }
+  .results {
+    width: auto;
+    margin-right: -30px;
+  }
 }

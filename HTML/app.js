@@ -14,7 +14,7 @@ leagueLinks.forEach(league => {
 const eplTableDiv = document.querySelector(".EplTable")
 
 async function requestFromAPI(id) {
-  video.innerHTML = ''
+  // video.innerHTML = ''
   mainP.innerHTML = ''
   try {
     const result = await axios.get(`https://cors-anywhere.herokuapp.com/https://livescore-api.com/api-client/leagues/table.json?competition_id=${id}&key=7RdxOmdooHD8HFJ7&secret=vpvAC0FwBlWjniou9C2YZgmnX0vFGeNb`);
@@ -24,7 +24,7 @@ async function requestFromAPI(id) {
     let leagueHeaders = document.createElement('div')
     leagueHeaders.classList.add("leagueHeaders")
     leagueHeaders.innerHTML =
-      ("<p class='headers'> Rank  &nbsp;  &nbsp; &nbsp;   Name                  Won Lost Draw Total Points Matches Played</p>")
+      ("<p class='headers'><div>Rank</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>Name</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>W</div>L<div>D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TP &nbsp;&nbsp;&nbsp;&nbsp; MP</div></p > ")
      results.append(leagueHeaders)
     
 
