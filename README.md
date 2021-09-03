@@ -120,16 +120,16 @@ Time frames are also key in the development cycle. You have limited time to code
 
 | Component                                                            | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Build both vertical and hortizal nav bars                            |    H     |      3hrs      |               |             |
-| Build CSS for vertical and hortizal nav bars                         |    H     |     1.5hrs     |               |             |
-| Adding in Paragraph, headers into both bav bars                      |    H     |      2hrs      |               |             |
-| Creating footer- connecting it to SM and making contact form         |    H     |     1.5hrs     |               |
-| Connecting Api to England home page and producing wanted information |    H     |    4 hours     |               |             |
-| Building highlights for nav bar items                                |    H     |   1.5 hours    |
-| Building England Home Page HTML                                      |    H     |     2.5hrs     |               |
-| Building England Home Page CSS                                       |    H     |     1.5hrs     |               |
-| Connecting 2nd API                                                   |    H     |     4 hrs      |               |
-| Connecting 2nd API and structure it to mix with the first one        |    H     |     4 hrs      |               |
+| Build both vertical and hortizal nav bars                            |    H     |      3hrs      |               |      4      |
+| Build CSS for vertical and hortizal nav bars                         |    H     |     1.5hrs     |               |      4      |
+| Adding in Paragraph, headers into both bav bars                      |    H     |      2hrs      |               |      4      |
+| Creating footer- connecting it to SM and making contact form         |    H     |     1.5hrs     |               |      4      |
+| Connecting Api to England home page and producing wanted information |    H     |    4 hours     |               |      4      |
+| Building highlights for nav bar items                                |    H     |   1.5 hours    |               |      4      |
+| Building England Home Page HTML                                      |    H     |     2.5hrs     |               |      4      |
+| Building England Home Page CSS                                       |    H     |     1.5hrs     |               |      4      |
+| Building the table of js                                             |    H     |     1.5hrs     |               |      4      |
+| Building out the information for each country                        |    H     |     1.5hrs     |               |      4      |
 | Total                                                                |    H     |     48hrs      |   52 hours    |  52 hours   |
 
 ^ Not sure what all to put in the details but I would assume with 4 days of work with a min of 12 hours days and a max of 17 hours a day on the project the max time I could hit would be 48-68 hours total time.
