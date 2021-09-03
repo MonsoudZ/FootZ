@@ -24,7 +24,7 @@ body {
 
 .wrapper ul {
   display: fixed;
-  flex-direction: row;
+  flex-direction: column;
   align-content: flex-start;
   list-style: none;
   margin: 0;
@@ -52,7 +52,7 @@ body {
 
 .wrapper .sidebar ul li a {
   color: #bdbdbd;
-  display: inline;
+  display: inline-block;
 }
 
 .wrapper .sidebar ul li:hover a {
@@ -179,7 +179,7 @@ h3 {
   padding: 5px;
   align-items: baseline;
   border: 2px solid #3eb489;
-  margin: 0 auto;
+  margin-left: 220px;
   width: 62%;
 }
 
@@ -226,7 +226,7 @@ h4 {
 .leagueHeaders {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  margin-left: 80px;
 }
 
 /* .headers {
